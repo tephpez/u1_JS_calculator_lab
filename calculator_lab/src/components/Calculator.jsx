@@ -33,23 +33,24 @@ export default function Calculator() {      //
         setDisplay(newValue);
     }
 
+    // <span className="material-symbols-rounded size-48" 
+    // onClick={backSpace}>DEL</span>
     return (
         <div id="calcContainer">
             <section id="display"><h1>{display}</h1></section>
             <section id="buttonsContainer">
                 <button className="clrDelBtns" 
                         onClick={resetCalc}>CLR</button>
-                <button className="clrDelBtns">
-                    <span className="material-symbols-rounded size-48" 
-                          onClick={backSpace}>DEL</span></button>
+                <button className="clrDelBtns"
+                        onClick={backSpace}>DEL</button>
                 <button 
                     className="functionBtn" 
                     value="%" 
                     onClick={handleClick}>%</button>
                 <button 
                     className="functionBtn" 
-                    value="/" 
-                    onClick={handleClick}>/</button>
+                    value="+" 
+                    onClick={handleClick}>+</button><br></br>
                 <button 
                     className="numBtn" 
                     value="1" 
@@ -65,7 +66,7 @@ export default function Calculator() {      //
                 <button 
                     className="functionBtn" 
                     value="*" 
-                    onClick={handleClick}>x</button>
+                    onClick={handleClick}>x</button><br></br>
                 <button 
                     className="numBtn" 
                     value="4" 
@@ -81,7 +82,7 @@ export default function Calculator() {      //
                 <button
                     className="functionBtn" 
                     value="-" 
-                    onClick={handleClick}>-</button>
+                    onClick={handleClick}>-</button><br></br>
                 <button
                     className="numBtn" 
                     value="7" 
@@ -97,23 +98,21 @@ export default function Calculator() {      //
                     onClick={handleClick}>9</button>
                 <button
                     className="functionBtn" 
-                    value="+" 
-                    onClick={handleClick}>+</button>
-            </section>
-            <section id="bottom-btns">
+                    value="/" 
+                    onClick={handleClick}>/</button><br></br>
                 <button 
-                className="numBtn" 
-                id="zero-btn" 
-                value="0" 
-                onClick={handleClick}>0</button>
+                    className="numBtn" 
+                    value="." 
+                    onClick={handleClick}>.</button>
                 <button 
-                className="numBtn" 
-                value="." 
-                onClick={handleClick}>.</button>
+                    className="numBtn" 
+                    value="0" 
+                    onClick={handleClick}>0</button>
                 <button 
-                className="equalsBtn" 
-                value="=" 
-                onClick={handleSubmit}>=</button>
+                    className="equalsBtn" 
+                    value="=" 
+                    id="eqBtn" 
+                    onClick={handleSubmit}>=</button>
             </section>
         </div>
     )
